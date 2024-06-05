@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parergon: 404 Not found</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200&family=Source+Serif+4:ital,opsz@0,8..60;1,8..60&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        :root {
+            --clr-accent: #B28300;
+            --spacing: 2.4rem;
+            --height-menu: 108px;
+        }
+
+        header {
+            background-color: #000;
+            border-bottom: 8px solid var(--clr-accent);
+            height: var(--height-menu);
+        }
+
+        #globe {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            right: 0;
+            display: flex;
+            z-index: -1;
+            opacity: 0.08;
+        }
+
+        #globe img {
+            margin: 0 auto;
+            max-width: 100vh;
+            animation: rotate 480s linear infinite;
+            -webkit-animation: rotate 400s linear infinite;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        main {
+            width: 100%;
+            padding: var(--spacing);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        h1 {
+            font-family: "Source Serif 4", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 4.8rem;
+            margin-top: 0;
+        }
+
+        h1::after {
+            content: '';
+            position: relative;
+            display: block;
+            width: 100%;
+            text-align: center;
+            top: 65%;
+            height: 8px;
+            width: 10%;
+            min-width: 120px;
+            left: 0;
+            background-color: var(--clr-accent);
+        }
+
+        p {
+            font-family: "Source Sans 3", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 200;
+            font-style: normal;
+            font-size: 1.2rem;
+        }
+
+        a {
+            font-weight: bold;
+            color: var(--clr-accent);
+        }
+
+        main img {
+            max-width: 400px;
+            height: auto;
+            margin-top: var(--spacing);
+        }
+
+        @media (min-width: 820px) {
+            main {
+                max-width: 1200px;
+                margin: 0 auto;
+                margin-top: 10vh;
+            }
+
+            main {
+                flex-direction: row;
+                gap: var(--spacing);
+            }
+
+            main:last-child {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            main img {
+                margin-left: var(--spacing);
+                margin-top: 0;
+            }
+
+            #globe {
+                top: -220px;
+            }
+
+            #globe img {
+                scale: 1.6;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <div id="globe">
+        <img src="./globe_home.png" alt="">
+    </div>
+    <main>
+        <div>
+            <h1>404 Not found</h1>
+            <p>Unfortunately, you have encountered an error.</p>
+            <p>Please contact <a href="mailto:info@anzamems.org">info@anzamems.org</a> regarding the <em>Parergon</em>
+                website.
+            </p>
+        </div>
+        <img src="./header_image.jpg" alt="Emblem of a woman sitting atop a globe">
+    </main>
+</body>
+
+</html>
